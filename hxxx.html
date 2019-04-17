@@ -1,0 +1,54 @@
+<html>
+<head>
+</head>
+<style>
+#one{
+width=220px;
+height=200px;
+border: 1px solid #069;
+overflow:hidden;
+font-size:12px;
+line-height:20px;
+}
+</style>
+<body>
+<div id="one">
+<div id="two">
+一直在盼望着一段美丽的爱 <br>
+所以我毫不犹疑地将你舍弃 <br>
+流浪的途中我不断寻觅 <br>
+却没料到回首之时 <br>
+年轻的你从未稍离 <br>
+从未稍离的你在我心中 <br>
+春天来时便反复地吟唱 <br>
+那滨江路上的灰沙炎日 <br>
+那丽水街前的一地月光 <br>
+那清晨园中为谁摘下的茉莉 <br>
+那渡船头上风里翻飞的裙裳 <br>
+在风里翻飞然后纷纷坠落 <br>
+岁月深埋在土中便成琥珀 <br>
+在灰色的黎明前我怅然回顾 <br>
+亲爱的朋友啊 <br>
+难道鸟必要自焚才能成为凤凰<br>
+难道青春必要愚昧 <br>
+爱必得忧伤 <br>
+</div>
+<div id="three">
+</div>
+</div>
+<script>
+var one=document.getElementById("one");
+var two=document.getElementById("two");
+var three=document.getElementById("three");
+three.innerHTML=two.innerHTML;
+function move(){
+if(three.offsetTop-one.scrollTop<=0){
+one.scrollTop-=three.offsetTop;
+}
+one.scrollTop++;
+window.document.title=one.scrollTop+','+three.offsetTop;
+}
+setInterval("move()",30);
+</script>
+</body>
+</html>
